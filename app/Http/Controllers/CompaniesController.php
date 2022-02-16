@@ -26,6 +26,7 @@ class CompaniesController extends Controller
         }
         
          $companies = companies::latest()->paginate(10);
+         return view('companie.index', compact('companies'));
 
     }
 
