@@ -14,6 +14,17 @@ class EmployeesController extends Controller
      */
     public function index()
     {
+        $employees = employees::latest();
+        if (Request('search')) {
+            $employees = employees::where('first_name','like','%'. Request('search'). '%')
+            ->orWhere('last_name','like','%'. Request('search'). '%')
+            ->orWhere('company_id','like','%'. Request('search'). '%')
+            ->orWhere('email','like','%'. Request('search'). '%')
+            ->orWhere('phone','like','%'. Request('search'). '%')
+            ->paginate(10);
+            return view('employee.index', compact('employees'));
+        }
+
         $employees = employees::latest()->paginate(10);
         return view('employee.index', compact('employees'));
     }
