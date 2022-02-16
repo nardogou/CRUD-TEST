@@ -26,7 +26,9 @@ class EmployeesController extends Controller
             return view('employee.index', compact('employees'));
         }
 
-
+        $employees = employees::latest()->paginate(10);
+        return view('employee.index', compact('employees'));
+    }
 
     /**
      * Show the form for creating a new resource.
