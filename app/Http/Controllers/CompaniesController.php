@@ -16,6 +16,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
+
         $companies = companies::latest();
         if (Request('search')) {
             $companies = companies::where('name','like','%'. Request('search'). '%')

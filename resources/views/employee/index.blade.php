@@ -2,7 +2,6 @@
     $i = 1;
 @endphp
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,6 +42,9 @@
                               @forelse ($employees as $index => $employee)
                                 <tr>
                                     <td>{{$i++}}</td>
+                              @forelse ($employees as $employee)
+                                <tr>
+                                    <td>{{$employee->id}}</td>
                                     <td>{!! $employee->first_name !!}</td>
                                     <td>{{ $employee->last_name }}</td>
                                     <td>{{ $employee->company_id }}</td>
@@ -55,6 +57,7 @@
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
                                         </form>
+                                    </td>
                                 </tr>
                               @empty
                                   <div class="alert alert-danger">
