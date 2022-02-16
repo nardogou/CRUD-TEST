@@ -14,6 +14,10 @@ class companies extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         company::factory(100)->create();
+=======
+        company::factory(10)->create();
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
     }
 }

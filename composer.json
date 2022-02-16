@@ -13,8 +13,12 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
+<<<<<<< HEAD
         "livewire/livewire": "^2.5",
         "yajra/laravel-datatables-oracle": "~9.0"
+=======
+        "livewire/livewire": "^2.5"
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
     },
     "require-dev": {
         "facade/ignition": "^2.5",

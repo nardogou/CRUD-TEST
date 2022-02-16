@@ -14,6 +14,7 @@ class EmployeesController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $employees = employees::latest();
         if (Request('search')) {
             $employees = employees::where('first_name','like','%'. Request('search'). '%')
@@ -25,6 +26,8 @@ class EmployeesController extends Controller
             return view('employee.index', compact('employees'));
         }
 
+=======
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
         $employees = employees::latest()->paginate(10);
         return view('employee.index', compact('employees'));
     }

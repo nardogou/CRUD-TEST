@@ -16,6 +16,7 @@
                     <div class="card-body">
                         <a href="{{ route('companies.create') }}" class="btn btn-md btn-success mb-3">TAMBAH</a>
                         <a href="{{ route ('dashboard')}}" class="btn btn-md btn-success mb-3">Home</a>
+<<<<<<< HEAD
                         <div class="row justify-content-end">
                                 <form action="/companies"class="d-flex">
                             <div class="input-group ml-auto mb-2 "></div>
@@ -24,6 +25,8 @@
                                 <button class="btn btn-danger mb-3" type="submit">Search</button>
                             </div>
                              </form>
+=======
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
                         <table class="table table-bordered">
                             <thead>
                               <tr>
@@ -37,7 +40,11 @@
                             <tbody>
                               @forelse ($companies as $companie)
                                 <tr>
+<<<<<<< HEAD
                                     <td>{{ $companie->count() * ($companie->currentPage - 0) + $loop->iteration}}</td>
+=======
+                                    <td>{{$companie->id}}</td>
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
                                     <td>{!! $companie->name !!}</td>
                                     <td>{{ $companie->email }}</td>
                                     <td class="text-center">
@@ -58,9 +65,14 @@
                               @endforelse
                             </tbody>
                           </table>  
+<<<<<<< HEAD
                           <div class="d-flex justify-content-end">
                             {{ $companies->links() }}
                             </div>
+=======
+                          {{ $companies->links() }}
+                    </div>
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
                 </div>
             </div>
         </div>

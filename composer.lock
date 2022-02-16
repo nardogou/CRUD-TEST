@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "a9633da247f27069c03bb1d3d3cf05f6",
+=======
+    "content-hash": "326f5346ae6ee4a8376d43134f40f393",
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6061,6 +6065,7 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.10.0"
             },
             "time": "2021-03-09T10:59:23+00:00"
+<<<<<<< HEAD
         },
         {
             "name": "yajra/laravel-datatables-oracle",
@@ -6146,6 +6151,8 @@
                 }
             ],
             "time": "2022-01-18T01:13:47+00:00"
+=======
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
         }
     ],
     "packages-dev": [

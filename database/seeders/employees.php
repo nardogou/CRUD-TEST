@@ -14,6 +14,10 @@ class employees extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         Employee::factory(100)->create();
+=======
+        Employee::factory(10)->create();
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
     }
 }

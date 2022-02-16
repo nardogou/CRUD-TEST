@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Whoops! Something went wrong<?php
+=======
+<?php
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
 
 return [
 

@@ -16,6 +16,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $companies = companies::latest();
         if (Request('search')) {
             $companies = companies::where('name','like','%'. Request('search'). '%')
@@ -28,6 +29,10 @@ class CompaniesController extends Controller
          $companies = companies::latest()->paginate(10);
          return view('companie.index', compact('companies'));
 
+=======
+        $companies = companies::latest()->paginate(10);
+        return view('companie.index', compact('companies'));
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
     }
 
     /**

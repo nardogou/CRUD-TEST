@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 @php
     $i = 1;
 @endphp
 <!DOCTYPE html>
 
+=======
+<!DOCTYPE html>
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,6 +24,7 @@
                     <div class="card-body">
                         <a href="{{ route('employees.create') }}" class="btn btn-md btn-success mb-3">TAMBAH</a>
                         <a href="{{ route ('dashboard')}}" class="btn btn-md btn-success mb-3">Home</a>
+<<<<<<< HEAD
                         <div class="row justify-content-end">
                             <form action="/employees"class="d-flex">
                             <div class="input-group ml-auto mb-2 ">
@@ -28,6 +33,8 @@
                                 <button class="btn btn-danger mb-3" type="submit">Search</button>
                                 </form>
                               </div>
+=======
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
                         <table class="table table-bordered">
                             <thead>
                               <tr>
@@ -40,9 +47,15 @@
                               </tr>
                             </thead>
                             <tbody>
+<<<<<<< HEAD
                               @forelse ($employees as $index => $employee)
                                 <tr>
                                     <td>{{$i++}}</td>
+=======
+                              @forelse ($employees as $employee)
+                                <tr>
+                                    <td>{{$employee->id}}</td>
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
                                     <td>{!! $employee->first_name !!}</td>
                                     <td>{{ $employee->last_name }}</td>
                                     <td>{{ $employee->company_id }}</td>
@@ -55,6 +68,10 @@
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
                                         </form>
+<<<<<<< HEAD
+=======
+                                    </td>
+>>>>>>> f9fbe03a5918e558779e2d7943fbf46d4f44b510
                                 </tr>
                               @empty
                                   <div class="alert alert-danger">
