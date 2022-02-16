@@ -1,4 +1,8 @@
+@php
+    $i = 1;
+@endphp
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +20,14 @@
                     <div class="card-body">
                         <a href="{{ route('employees.create') }}" class="btn btn-md btn-success mb-3">TAMBAH</a>
                         <a href="{{ route ('dashboard')}}" class="btn btn-md btn-success mb-3">Home</a>
+                        <div class="row justify-content-end">
+                            <form action="/employees"class="d-flex">
+                            <div class="input-group ml-auto mb-2 ">
+                                <input type="text" class="form-control mr-2 border-2" placeholder="Search.." name="search"
+                                value="{{request('search')}}">
+                                <button class="btn btn-danger mb-3" type="submit">Search</button>
+                                </form>
+                              </div>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
@@ -28,9 +40,9 @@
                               </tr>
                             </thead>
                             <tbody>
-                              @forelse ($employees as $employee)
+                              @forelse ($employees as $index => $employee)
                                 <tr>
-                                    <td>{{$employee->id}}</td>
+                                    <td>{{$i++}}</td>
                                     <td>{!! $employee->first_name !!}</td>
                                     <td>{{ $employee->last_name }}</td>
                                     <td>{{ $employee->company_id }}</td>
@@ -43,7 +55,6 @@
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
                                         </form>
-                                    </td>
                                 </tr>
                               @empty
                                   <div class="alert alert-danger">

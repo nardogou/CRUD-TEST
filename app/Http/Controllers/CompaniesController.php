@@ -16,8 +16,18 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        $companies = companies::latest()->paginate(10);
-        return view('companie.index', compact('companies'));
+        $companies = companies::latest();
+        if (Request('search')) {
+            $companies = companies::where('name','like','%'. Request('search'). '%')
+            ->orWhere('email','like','%'. Request('search'). '%')
+            ->orWhere('website','like','%'. Request('search'). '%')
+            ->paginate(10);
+            return view('companie.index', compact('companies'));
+        }
+        
+         $companies = companies::latest()->paginate(10);
+         return view('companie.index', compact('companies'));
+
     }
 
     /**

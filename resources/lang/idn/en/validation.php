@@ -1,4 +1,4 @@
-Whoops! Something went wrong<?php
+Ups! Ada yang tidak beres<?php
 
 return [
 
